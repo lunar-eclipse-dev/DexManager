@@ -1,0 +1,15 @@
+import kotlin.Boolean;
+
+CREATE TABLE user_data (
+    user_data_id     INTEGER PRIMARY KEY
+                             REFERENCES dex (dex_id),
+    shiny            INTEGER AS Boolean NOT NULL,
+    original_trainer INTEGER AS Boolean NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO user_data (user_data_id, shiny, original_trainer)
+VALUES (?, ?, ?);
+
+delete:
+DELETE FROM user_data WHERE user_data_id=?;

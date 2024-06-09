@@ -1,0 +1,121 @@
+BEGIN TRANSACTION;
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            1,
+                            1,
+                            218,
+                            1
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            2,
+                            219,
+                            374,
+                            9
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            3,
+                            375,
+                            532,
+                            15
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            4,
+                            533,
+                            682,
+                            21
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            5,
+                            683,
+                            862,
+                            26
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            6,
+                            863,
+                            987,
+                            32
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            7,
+                            988,
+                            1088,
+                            37
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            8,
+                            1089,
+                            1255,
+                            41
+                        );
+
+INSERT INTO generations (
+                            gen_id,
+                            dex_first,
+                            dex_last,
+                            starting_box
+                        )
+                        VALUES (
+                            9,
+                            1256,
+                            1386,
+                            47
+                        );
+
+
+COMMIT TRANSACTION;

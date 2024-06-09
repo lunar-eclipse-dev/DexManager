@@ -1,0 +1,37 @@
+CREATE TABLE dex (
+    dex_id     INTEGER PRIMARY KEY,
+    name       TEXT    NOT NULL,
+    form_name  TEXT,
+    form_id    TEXT,
+    gender_id  TEXT,
+    keyword    TEXT    NOT NULL,
+    generation INTEGER REFERENCES generations (gen_id)
+                       NOT NULL,
+    type1      TEXT    NOT NULL,
+    type2      TEXT,
+    national   INTEGER NOT NULL,
+    sw_sh      TEXT,
+    bd_sp      TEXT,
+    la         TEXT,
+    sc_vi      TEXT
+);
+
+selectAll:
+SELECT *
+FROM dex;
+
+selectById:
+SELECT *
+FROM dex
+WHERE dex_id = :id;
+
+selectByGen:
+SELECT *
+FROM dex
+WHERE generation = :gen;
+
+selectAllWithData:
+SELECT dex.*, generations.*, user_data.*
+FROM dex
+INNER JOIN generations ON generation=gen_id
+LEFT JOIN user_data ON dex_id=user_data_id;

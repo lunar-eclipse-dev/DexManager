@@ -1,0 +1,11 @@
+CREATE TABLE generations (
+    gen_id       INTEGER PRIMARY KEY,
+    dex_first    INTEGER REFERENCES dex (dex_id)
+                         NOT NULL
+                         UNIQUE,
+    dex_last     INTEGER REFERENCES dex (dex_id)
+                         NOT NULL
+                         UNIQUE,
+    starting_box INTEGER UNIQUE
+                         NOT NULL
+);
