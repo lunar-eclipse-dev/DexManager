@@ -1,13 +1,10 @@
-package dev.lunar_eclipse.dexmanager.ui
+package dev.lunar_eclipse.dexmanager.ui.dex
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import dev.lunar_eclipse.dexmanager.DexViewModel
 import dev.lunar_eclipse.dexmanager.db.DexData
 
 @Composable

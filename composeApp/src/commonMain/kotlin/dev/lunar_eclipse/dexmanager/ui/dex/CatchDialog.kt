@@ -1,4 +1,4 @@
-package dev.lunar_eclipse.dexmanager.ui
+package dev.lunar_eclipse.dexmanager.ui.dex
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import dev.lunar_eclipse.dexmanager.DexViewModel
 import dev.lunar_eclipse.dexmanager.db.UserData
 import dev.lunar_eclipse.dexmanager.koinViewModel
+import dev.lunar_eclipse.dexmanager.ui.BoxInfo
 
 @Composable
 fun CatchDialog(

@@ -1,4 +1,4 @@
-package dev.lunar_eclipse.dexmanager.ui
+package dev.lunar_eclipse.dexmanager.ui.dex
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -6,11 +6,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.SwipeToDismissBox
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Flare
 import androidx.compose.material.icons.filled.Person
@@ -22,6 +21,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SwipeToDismissBox
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberSwipeToDismissBoxState
@@ -35,6 +35,7 @@ import dev.lunar_eclipse.dexmanager.DexViewModel
 import dev.lunar_eclipse.dexmanager.db.DexData
 import dev.lunar_eclipse.dexmanager.db.UserData
 import dev.lunar_eclipse.dexmanager.koinViewModel
+import dev.lunar_eclipse.dexmanager.ui.InfoChip
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -99,13 +100,15 @@ fun DexItem(item: DexData) {
                 },
                 trailingContent = {
                     if (item.userData != null) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
                             if (!item.userData!!.originalTrainer) {
                                 InfoChip(
                                     leadingIcon = {
                                         Icon(
                                             Icons.Filled.Person,
-                                            contentDescription = "original trainer"
+                                            contentDescription = "Non-OT"
                                         )
                                     },
                                     label = { Text("Non-OT") }
@@ -116,7 +119,7 @@ fun DexItem(item: DexData) {
                                     leadingIcon = {
                                         Icon(
                                             Icons.Filled.Flare,
-                                            contentDescription = "shiny"
+                                            contentDescription = "Shiny"
                                         )
                                     },
                                     label = { Text("Shiny") },

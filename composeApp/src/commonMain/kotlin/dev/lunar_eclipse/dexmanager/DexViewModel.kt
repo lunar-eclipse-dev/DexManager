@@ -21,6 +21,7 @@ class DexViewModel(private val db: Database) : ViewModel() {
     val showCaught = mutableStateOf(true)
     val showNotCaught = mutableStateOf(true)
     val showGens = mutableStateListOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    val search = mutableStateOf<String?>(null)
 
     fun loadDex() {
         viewModelScope.launch {

@@ -14,6 +14,8 @@ sqldelight {
     databases {
         create("AppDatabase") {
             packageName.set("dev.lunar_eclipse.dexmanager.db")
+            schemaOutputDirectory.set(file("src/commonMain/sqldelight/databases"))
+            verifyMigrations.set(true)
         }
     }
 }

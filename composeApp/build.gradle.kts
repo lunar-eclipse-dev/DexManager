@@ -17,10 +17,10 @@ kotlin {
         }
     }
     
-    jvm("desktop")
+//    jvm("desktop")
     
     sourceSets {
-        val desktopMain by getting
+//        val desktopMain by getting
         
         androidMain.dependencies {
             implementation(compose.preview)
@@ -47,11 +47,11 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
             implementation(libs.kodein.di.compose)
         }
-        desktopMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(compose.material3)
-            api("io.github.qdsfdhvh:image-loader-extension-imageio:1.8.1")
-        }
+//        desktopMain.dependencies {
+//            implementation(compose.desktop.currentOs)
+//            implementation(compose.material3)
+//            api("io.github.qdsfdhvh:image-loader-extension-imageio:1.8.1")
+//        }
     }
 }
 
@@ -99,14 +99,14 @@ android {
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "dev.lunar_eclipse.dexmanager"
-            packageVersion = "1.0.0"
-        }
-    }
-}
+//compose.desktop {
+//    application {
+//        mainClass = "MainKt"
+//
+//        nativeDistributions {
+//            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+//            packageName = "dev.lunar_eclipse.dexmanager"
+//            packageVersion = "1.0.0"
+//        }
+//    }
+//}
